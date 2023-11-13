@@ -1,9 +1,26 @@
-<mvc:View controllerName="zfhwedel.salesFreestyle.zfhwedelui5demo.controller.Main"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-        <content >
-            <Button id="helloWorldButton" text="Say hi" press=".onShowHello"></Button>
+<mvc:View
+    controllerName="zfhwedel.salesFreestyle.zfhwedelui5demo.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <content>
+            <Button
+                id="helloWorldButton"
+                text="Say hi"
+                press=".onShowHello"
+            />
+            <Input
+                id="helloWorldInput"
+                value="{/recipient/name}"
+                description="Hello {/recipient/name}"
+                valueLiveUpdate="true"
+                width="60%"
+            />
         </content>
     </Page>
 </mvc:View>
