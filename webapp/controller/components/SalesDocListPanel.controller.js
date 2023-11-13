@@ -8,11 +8,15 @@ sap.ui.define([
           // Do some init stuff
           
        },
-       showDetails: function() {
+       showDetails: function(oEvent) {
+         // Get selected element
+         const oItem = oEvent.getSource()
          // Get Router from Component.js
          const oRouter = this.getOwnerComponent().getRouter();
          // Nav to detail page (Use name of route)
-			oRouter.navTo("SalesDocDetail");
+			oRouter.navTo("SalesDocDetail", {
+            salesDocPath: window.encodeURIComponent(oItem.getBindingContext("salesDocs").getPath().substr(1))
+         });
        }
     });
  });
