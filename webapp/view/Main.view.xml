@@ -33,6 +33,26 @@
                     class="sapUiSmallMargin"
                 />
             </Panel>
+
+            <Panel
+                id="invoicePanel"
+                headerText="{i18n>invoiceTitle}"
+                class="sapUiResponsiveMargin"
+                width="auto"
+            >
+                <List
+                    id="invoiceList"
+                    headerText="{i18n>invoiceListTitle}"
+                    items="{invoice>/Invoices}"
+                >
+                    <items>
+                        <ObjectListItem
+                            id="listItem"
+                            title="{invoice>Quantity} x {invoice>ProductName}"
+                        />
+                    </items>
+                </List>
+            </Panel>
         </content>
     </Page>
 </mvc:View>
