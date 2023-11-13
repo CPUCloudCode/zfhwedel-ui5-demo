@@ -11,7 +11,7 @@
         <content>
             <Button
                 id="helloWorldButton"
-                text="Say hi"
+                text="{i18n>showHelloButtonText}"
                 press=".onShowHello"
             />
             <Input
