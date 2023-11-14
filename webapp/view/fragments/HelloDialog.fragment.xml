@@ -6,11 +6,12 @@
         id="helloDialog"
         title="Hello {/recipient/name}"
     >
-        <content>
-            <Text
-                id="helloDialogText"
-                text="{i18n>helloDialogText}"
+        <beginButton>
+            <Button
+                id="helloDialogCloseButton"
+                text="{i18n>dialogCloseButtonText}"
+                press=".onCloseDialog"
             />
-        </content>
+        </beginButton>
     </Dialog>
 </core:FragmentDefinition>
