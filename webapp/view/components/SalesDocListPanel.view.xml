@@ -11,8 +11,16 @@
     >
         <List
             id="salesDocsList"
+            growing="true"
             headerText="{i18n>salesDocsListTitle}"
-            items="{salesDocs>/SalesDoc}"
+            items="{
+                path : 'salesDocs>/SalesDoc',
+                sorter : {
+                    path : 'SalesDocType',
+                    group : true
+                }
+    
+            }"
         >
             <headerToolbar>
                 <Toolbar id="salesDocsListToolbar">
@@ -47,6 +55,7 @@
                     type="Navigation"
                     press=".showDetails"
                     numberState="{= ${salesDocs>SalesDocType} === 'IN' ? 'Success' : 'Warning'}"
+                    
                 />
             </items>
         </List>
