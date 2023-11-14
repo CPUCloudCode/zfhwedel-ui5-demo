@@ -30,6 +30,7 @@
                             numberUnit="{salesDocs>SalesDocNetValueCurrency}"
                             type="Navigation"
                             press=".showDetails"
+                            numberState="{= ${salesDocs>SalesDocType} === 'IN' ? 'Success' : 'Warning'}"
                             />
                     </items>
                 </List>
